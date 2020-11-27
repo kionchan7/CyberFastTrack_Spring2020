@@ -1,8 +1,10 @@
+# Cyber FastTrack Spring 2020
+# BM02 Solution
 We use buffer overflow to display the flag.
 BM02_1.PNG
 We use IDA software to display the structure of this program. There are the exploitable(char const*) function and the read_flag(void) function. Also, there are some local variales that stored in the explotable() function. For a better understanding of the program, we need a gdb debugger.
 BM02_2.PNG
-	In the terminal, we type gdb <name>, gdb program
+	In the terminal, we type `gdb <name>`, gdb program
 	Type run
 	Hit Ctrl + c
 BM02_3.PNG	
@@ -55,6 +57,7 @@ BM02_13.PNG
 	print("job title")
 	Send the bm02.py to the server and it would prints out the flag.
 	python bm02.py | nc bm02.allyourbases.co 9003
+
 
 
 

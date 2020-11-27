@@ -7,7 +7,7 @@ BM02_2.PNG ![image info](BM02_2.PNG)
 * Type `run` to run the program in the debugger.
 * Hold down the Ctrl key and press c
 BM02_3.PNG	
-	Notice that, in order to enter the exploitable() function, we first need to enter `add_candidate` to add employee and then enter the exploitable() function.
+   Notice that, in order to enter the exploitable() function, we first need to enter `add_candidate` to add employee and then enter the exploitable() function.  
 BM02_4.PNG and BM02_5.PNG and BM02_6.PNG
 	Enter `disas exploitable(char const*)`
 	Enter `c` to continue without paging

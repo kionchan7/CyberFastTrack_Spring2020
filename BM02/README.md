@@ -14,20 +14,30 @@ BM02_3.PNG\
 ![image info](BM02_3.PNG)
 * Notice that, in order to enter the exploitable() function, we first need to enter `add_candidate` to add employee and then enter the exploitable() function.
 
-BM02_4.PNG and BM02_5.PNG and BM02_6.PNG\
-
+BM02_4.PNG\
+![image info](BM02_4.PNG)
 * Enter `disas exploitable(char const*)`
 * Enter `c` to continue without paging
 * we use break *address to set a break point. In this case, we use 0x5655634d.
+
+
+BM02_5.PNG\
+![image info](BM02_5.PNG)
 * Type `break *0x5655634d`
 * Type `run`
 * Type `add_candidate`
+
+BM02_6.PNG\
+![image info](BM02_6.PNG)
 * Enter one information for each of the First Name, Last Name, and Job Title.
 * * In this case, I entered `First` as the First Name, `Last` as the Last Name, and `Title` as the Job Title.
 * Then, you will encounter an breakpoint at `Breakpoint 1, 0x5655634d in exploitable(char const*) ()`
-BM02_7.PNG
-	Enter info frame to get the return address that stored at eip. In this case, the return address is 0x56557492. 
-BM02_8.PNG
+
+BM02_7.PNG\
+![image info](BM02_7.PNG)
+* Enter info frame to get the return address that stored at eip. In this case, the return address is 0x56557492. 
+
+BM02_8.PNG\
 	Display the current and the next 199 stack pointer.
 	Enter x/200x $sp
 	The addresses that are 0x00000000 are local variables that we need to fill in before changing the return address. So in a text file, we enter

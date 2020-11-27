@@ -1,7 +1,7 @@
 # Cyber FastTrack Spring 2020
 # BM02 Solution
-We use buffer overflow to display the flag.__
-BM02_1.PNG<br />
+We use buffer overflow to display the flag.<br />
+BM02_1.PNG\s\s
 We use IDA software to display the structure of this program. There are the exploitable(char const*) function and the read_flag(void) function. Also, there are some local variales that stored in the explotable() function. For a better understanding of the program, we need a gdb debugger.<br />
 BM02_2.PNG
 	In the terminal, we type `gdb <name>`, gdb program

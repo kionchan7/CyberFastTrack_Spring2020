@@ -42,15 +42,10 @@ BM02_8.PNG\
 * Display the current and the next 199 stack pointer.
 * Enter `x/200x $sp`
 * The addresses that are 0x00000000 are local variables that we need to fill in before accessing/changing the return address. So in a text file, we enter
-```javascript
-function fancyAlert(arg) {
-  if(arg) {
-    $.facebox({div:'#foo'})
-  }
-}
+```python
+print("add_candidate")
+print('A'*20)
 ```
-* print("add_candidate")
-* print('A'*20)
 * and save it as a python file.
 BM02_9.PNG
 	Hit Ctrl + c to exit the current program

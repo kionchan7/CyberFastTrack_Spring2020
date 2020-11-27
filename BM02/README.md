@@ -1,23 +1,24 @@
 # Cyber FastTrack Spring 2020
 # BM02 Solution
 We use buffer overflow to display the flag.<br />
-BM02_1.PNG\s\s
+BM02_1.PNG<br />
 We use IDA software to display the structure of this program. There are the exploitable(char const*) function and the read_flag(void) function. Also, there are some local variales that stored in the explotable() function. For a better understanding of the program, we need a gdb debugger.<br />
-BM02_2.PNG
-	In the terminal, we type `gdb <name>`, gdb program
-	Type run
-	Hit Ctrl + c
-BM02_3.PNG	
-	Notice that, in order to enter the exploitable() function, we first need to enter add_candidate to add employee and then enter the exploitable() function.
-BM02_4.PNG and BM02_5.PNG and BM02_6.PNG
-	Enter disas exploitable(char const*)
-	Enter c to continue without paging
-	we use break *address to set a break point. In this case, we use 0x5655634d.
-	Type break *0x5655634d
-	Type run
-	Type add_candidate
-	Enter one information for each of the First Name, Last Name, and Job Title.
-	Then, you will encounter an breakpoint at Breakpoint 1, 0x5655634d in exploitable(char const*) ()
+BM02_2.PNG<br />
+	<p>In the terminal, we type `gdb <name of your program>` to start the debugger.</p><br />
+	<p>Type `run` to run the program in the debugger.<br />
+	<p>Hold down the Ctrl key and press c<br />
+BM02_3.PNG<br />	
+	<p>Notice that, in order to enter the exploitable() function, we first need to enter `add_candidate` to add employee and then enter the exploitable() function.
+BM02_4.PNG and BM02_5.PNG and BM02_6.PNG<br />
+	<p>Enter `disas exploitable(char const*)`</p><br />
+	<p>Enter `c` to continue without paging</p><br />
+	<p>we use break *address to set a break point. In this case, we use 0x5655634d.</p><br />
+	<p>Type `break *0x5655634d`</p><br />
+	<p>Type `run`</p><br />
+	<p>Type `add_candidate`</p><br />
+	<p>Enter one information for each of the First Name, Last Name, and Job Title.
+		<p><p>In this case, I entered `First` as the First Name, `Last` as the Last Name, and `Title` as the Job Title.</p></p>
+	Then, you will encounter an breakpoint at `Breakpoint 1, 0x5655634d in exploitable(char const*) ()`
 BM02_7.PNG
 	Enter info frame to get the return address that stored at eip. In this case, the return address is 0x56557492. 
 BM02_8.PNG

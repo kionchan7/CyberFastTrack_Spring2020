@@ -30,7 +30,7 @@ BM02_5.PNG\
 BM02_6.PNG\
 ![image info](BM02_6.PNG)
 * Enter one information for each of the First Name, Last Name, and Job Title.
-** In this case, I entered `First` as the First Name, `Last` as the Last Name, and `Title` as the Job Title.
+  * In this case, I entered `First` as the First Name, `Last` as the Last Name, and `Title` as the Job Title.
 * Then, you will encounter an breakpoint at `Breakpoint 1, 0x5655634d in exploitable(char const*) ()`
 
 BM02_7.PNG\

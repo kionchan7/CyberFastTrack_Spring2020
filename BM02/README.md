@@ -35,15 +35,23 @@ BM02_6.PNG\
 
 BM02_7.PNG\
 ![image info](BM02_7.PNG)
-* Enter info frame to get the return address that stored at eip. In this case, the return address is 0x56557492. 
+* Enter info frame to get the return address that stored at eip. In this case, the return address is `0x56557492`. 
 
 BM02_8.PNG\
-	Display the current and the next 199 stack pointer.
-	Enter x/200x $sp
-	The addresses that are 0x00000000 are local variables that we need to fill in before changing the return address. So in a text file, we enter
-	print("add_candidate")
-	print('A'*20)
-	and save it as a python file.
+![image info](BM02_8.PNG)
+* Display the current and the next 199 stack pointer.
+* Enter `x/200x $sp`
+* The addresses that are 0x00000000 are local variables that we need to fill in before accessing/changing the return address. So in a text file, we enter
+```javascript
+function fancyAlert(arg) {
+  if(arg) {
+    $.facebox({div:'#foo'})
+  }
+}
+```
+* print("add_candidate")
+* print('A'*20)
+* and save it as a python file.
 BM02_9.PNG
 	Hit Ctrl + c to exit the current program
 	Run the program as:

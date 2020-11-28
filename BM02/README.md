@@ -12,7 +12,7 @@ BM02_2.PNG\
 
 BM02_3.PNG\
 ![image info](BM02_3.PNG)
-* Notice that, in order to enter the exploitable() function, we first need to enter `add_candidate` to add employee and then enter the exploitable() function.
+* Notice that, if we look through the program, we know that we must enter `add_candidate` in order to add employee and use the exploitable() function.
 
 BM02_4.PNG\
 ![image info](BM02_4.PNG)

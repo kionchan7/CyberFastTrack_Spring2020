@@ -189,5 +189,22 @@ print('C'*360 + '\x00')
 * Re-run the program and display the current and the next 149 stack pointers.
 * It doesn't seems like nothing changes because the last two hex value is already `00`.
 
+BH04_18.PNG\
+![image info](BH04_18.png)
+* Re-run the program
+* Enter `info frame` to see if the return address changed to `0x5655615d`.
 
-	
+BH04_19.PNG\
+![image info](BH04_19.png)
+* Use `si` to execute one instruction at a time and see if the program enters the `read_flag(void)` function and display the flag.
+* It displays the flag
+
+BH04_20.PNG\
+![image info](BH04_20.png)
+* Send the bh04.py to the server and it would prints out the flag.
+  * `python bh04.py | nc bh04.allyourbases.co 9002`
+
+
+
+
+

@@ -5,7 +5,7 @@ BH04_1.PNG\
 * This is the challenge for BH04. Take a look at the [BM02 Solution](https://github.com/koc777/CyberFastTrack_Spring2020/tree/main/BM02) for more info.
 
 IDA-exploitable().PNG\
-![image info](IDA-exploitable().png)
+![image info](IDA-exploitable().PNG)
 * We use IDA software to display the structure of this program. There are the exploitable(char const*, char const*, char const*) function and the read_flag(void) function. In this challenge, the exploitable function takes all the inputs. Also, there are some local variales that stored in the explotable() function. For a better understanding of the program, we need a gdb debugger.
 * If we look through the program, we know that we must enter `add_candidate` in order to add employee and use the exploitable() function.
 
@@ -48,6 +48,7 @@ print('A'*120)
 * Type `run < <(python bm02.py)` to re-run the program in the debugger.
 * Enter `x/150x $sp` to display the current and the next 149 stack pointers
 * Look at the stack canary value `0xbeef0000` and the return address `0x56557579`. They are both the same as above.
+* We need to changes the return address to `0x5655615d` because we want to execute the read_flag() function. Note: we get `0x5655615d` from `disas read_flag` in the debugger. Remember, we have to write the addresses in reverse byte order.
 
 BH04_7.PNG\
 ![image info](BH04_7.png)

@@ -5,13 +5,13 @@ BX10_1.PNG\
 * This is the challenge for BX10.
 
 BX10_2.PNG\
-![image info](BX10_1.PNG)
+![image info](BX10_2.PNG)
 * if we put in a lot of inputs, such as 26 characters, it prints out `Segmentation fault EIP` error message and then a message of `Backtrace in main(), test call getFlag() at` an address.
 * In my case, I have `Segmentation falut EIP 0x45454545` and `Backtrace in main(), test call getFlag() at 0x8fccd65`
 * We need to change the EIP or the return address to 0x8fccd65 in order to execute the getFlag() function.
 
 BX10_3.PNG\
-![image info](BX10_2.PNG)
+![image info](BX10_3.PNG)
 * It was similar to [BM02](https://github.com/koc777/CyberFastTrack_Spring2020/tree/main/BM02). We send a payload to the server and see what it returns
 * We tried 30 characters of 'E' and the desired return address.
 ```python
